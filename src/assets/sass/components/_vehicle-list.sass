@@ -1,0 +1,10 @@
+@import "src/assets/sass/mixins"
+
+.vehicle-list
+  display: flex
+  flex-wrap: wrap
+  width: get-vw(790px)
+
++mediaSize(1024)
+  .vehicle-list
+    width: 100%

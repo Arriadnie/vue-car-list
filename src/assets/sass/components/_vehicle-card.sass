@@ -1,0 +1,321 @@
+@import "src/assets/sass/mixins"
+@import "src/assets/sass/vars"
+
+.vehicle-card
+  width: get-vw(252px)
+  border-radius: get-vw(4px)
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  border: 1px solid $main-light-grey
+  margin-bottom: get-vw(16px)
+
+  &.sold
+    opacity: 0.5
+    pointer-events: none
+
+  + .vehicle-card
+    margin-left: get-vw(16px)
+
+  &:nth-child(3n+1)
+    margin-left: 0
+
+  &__image
+    width: 100%
+    height: get-vw(190px)
+    display: flex
+    flex-shrink: 0
+    position: relative
+
+    &-label
+      position: absolute
+      z-index: 1
+      top: get-vw(8px)
+      display: flex
+      align-items: center
+      justify-content: center
+      left: get-vw(8px)
+      height: get-vw(24px)
+      width: get-vw(61px)
+      background: #fff
+      border-radius: get-vw(99px)
+      padding: get-vw(4px) get-vw(8px) get-vw(4px) get-vw(25px)
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        left: get-vw(6px)
+        width: get-vw(12px)
+        height: get-vw(12px)
+        top: get-vw(6px)
+        border-radius: 50%
+        background: $main-blue
+
+      p
+        font-size: get-vw(12px)
+        font-weight: bold
+
+    img
+      width: 100%
+      object-fit: cover
+      height: 100%
+
+  &__info
+    padding: get-vw(16px)
+    display: flex
+    flex-direction: column
+    height: 100%
+    width: 100%
+
+  &__car
+    &-make
+      font-size: get-vw(14px)
+      font-weight: 700
+      line-height: 1.42
+    &-version
+      text-transform: uppercase
+      line-height: 1.42
+      font-size: get-vw(14px)
+      font-weight: 400
+      color: $main-dark-grey
+
+      margin-bottom: auto
+
+  &__delimiter
+    margin-top: get-vw(16px)
+    margin-bottom: get-vw(18px)
+    background: $main-orange
+    height: get-vw(2px)
+    width: get-vw(55px)
+
+  .price-wrapper
+    display: flex
+    align-items: center
+    width: 100%
+    justify-content: space-between
+
+    .starting-from
+      font-size: get-vw(12px)
+      color: $main-dark-grey
+      line-height: 1.3
+      font-weight: 400
+
+    .price
+      font-weight: 700
+      line-height: 1.1
+      font-size: get-vw(20px)
+
+  .like
+    width: get-vw(40px)
+    cursor: pointer
+    height: get-vw(40px)
+    border-radius: 50%
+    border: 1px solid $main-light-grey
+    padding: get-vw(12px)
+
+  &__statistics
+    margin-top: get-vw(16px)
+    background: $grey-lighter
+    border-radius: get-vw(2px)
+    padding: get-vw(8px)
+
+    &-title
+      font-size: get-vw(11px)
+      font-weight: 700
+      line-height: 1.27
+      margin-bottom: get-vw(4px)
+
+    &-detail
+      font-size: get-vw(12px)
+      line-height: 1.3
+      color: $main-dark-grey
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      .label
+        width: get-vw(40px)
+        height: get-vw(16px)
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-shrink: 0
+        margin-left: get-vw(8px)
+        z-index: 1
+        color: #fff
+        font-size: get-vw(10px)
+        font-weight: 700
+
+        .icon
+          position: absolute
+          top: 0
+          left: 0
+          z-index: -1
+
++mediaSize(1024)
+  .vehicle-card
+    width: 48%
+    border-radius: get-t-vw(6px)
+    margin-bottom: get-t-vw(30px)
+
+    + .vehicle-card
+      margin-left: 4%
+
+    &:nth-child(3n+1)
+      margin-left: 4%
+
+    &:nth-child(2n+1)
+      margin-left: 0
+
+    &__image
+      height: get-t-vw(220px)
+
+      &-label
+        top: get-t-vw(8px)
+        left: get-t-vw(8px)
+        height: get-t-vw(24px)
+        width: get-t-vw(61px)
+        border-radius: get-t-vw(99px)
+        padding: get-t-vw(4px) get-t-vw(8px) get-t-vw(4px) get-t-vw(25px)
+
+        &:after
+          left: get-t-vw(6px)
+          width: get-t-vw(12px)
+          height: get-t-vw(12px)
+          top: get-t-vw(6px)
+
+        p
+          font-size: get-t-vw(12px)
+
+
+    &__info
+      padding: get-t-vw(16px)
+
+    &__car
+      &-make
+        font-size: get-t-vw(17px)
+      &-version
+        font-size: get-t-vw(17px)
+
+    &__delimiter
+      margin-top: get-t-vw(16px)
+      margin-bottom: get-t-vw(18px)
+      height: get-t-vw(2px)
+      width: get-t-vw(65px)
+
+    .price-wrapper
+
+      .starting-from
+        font-size: get-t-vw(14px)
+
+      .price
+        font-size: get-t-vw(22px)
+
+    .like
+      width: get-t-vw(45px)
+      height: get-t-vw(45px)
+      padding: get-t-vw(12px)
+
+    &__statistics
+      margin-top: get-t-vw(16px)
+      border-radius: get-t-vw(2px)
+      padding: get-t-vw(8px)
+
+      &-title
+        font-size: get-t-vw(13px)
+        margin-bottom: get-t-vw(4px)
+
+      &-detail
+        font-size: get-t-vw(13px)
+
+        .label
+          width: get-t-vw(45px)
+          height: get-t-vw(17px)
+          margin-left: get-t-vw(8px)
+          font-size: get-t-vw(12px)
+
++mediaSize(750)
+  .vehicle-card
+    width: 100%
+    border-radius: get-m-vw(6px)
+    margin-bottom: get-m-vw(30px)
+
+    + .vehicle-card
+      margin-left: 0
+
+    &:nth-child(3n+1)
+      margin-left: 0
+
+    &__image
+      height: get-m-vw(220px)
+
+      &-label
+        top: get-m-vw(8px)
+        left: get-m-vw(8px)
+        height: get-m-vw(24px)
+        width: get-m-vw(61px)
+        border-radius: get-m-vw(99px)
+        padding: get-m-vw(4px) get-m-vw(8px) get-m-vw(4px) get-m-vw(25px)
+
+        &:after
+          left: get-m-vw(6px)
+          width: get-m-vw(12px)
+          height: get-m-vw(12px)
+          top: get-m-vw(6px)
+
+        p
+          font-size: get-m-vw(12px)
+
+
+    &__info
+      padding: get-m-vw(16px)
+
+    &__car
+      &-make
+        font-size: get-m-vw(17px)
+      &-version
+        font-size: get-m-vw(17px)
+
+    &__delimiter
+      margin-top: get-m-vw(16px)
+      margin-bottom: get-m-vw(18px)
+      height: get-m-vw(2px)
+      width: get-m-vw(65px)
+
+    .price-wrapper
+
+      .starting-from
+        font-size: get-m-vw(14px)
+
+      .price
+        font-size: get-m-vw(22px)
+
+    .like
+      width: get-m-vw(45px)
+      height: get-m-vw(45px)
+      padding: get-m-vw(12px)
+      cursor: pointer
+
+    &__statistics
+      margin-top: get-m-vw(16px)
+      border-radius: get-m-vw(2px)
+      padding: get-m-vw(8px)
+
+      &-title
+        font-size: get-m-vw(13px)
+        margin-bottom: get-m-vw(4px)
+
+      &-detail
+        font-size: get-m-vw(13px)
+
+        .label
+          width: get-m-vw(45px)
+          height: get-m-vw(17px)
+          margin-left: get-m-vw(8px)
+          font-size: get-m-vw(12px)
+
+
+

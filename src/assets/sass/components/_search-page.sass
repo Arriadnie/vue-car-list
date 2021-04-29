@@ -1,0 +1,41 @@
+@import "src/assets/sass/mixins"
+
+.app
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: get-vw(45px) get-vw(55px) get-vw(45px) get-vw(45px)
+
+  &__title
+    font-size: get-vw(32px)
+    font-weight: 700
+    text-align: center
+    margin-bottom: get-vw(43px)
+
+  &__container
+    display: flex
+    align-items: flex-start
+    width: 100%
+    justify-content: space-between
+
++mediaSize(1024)
+  .app
+    padding: get-t-vw(45px)
+
+    &__title
+      font-size: get-t-vw(32px)
+      margin-bottom: get-t-vw(40px)
+
+    &__container
+      flex-direction: column
+
++mediaSize(750)
+  .app
+    padding: get-m-vw(20px)
+
+    &__title
+      font-size: get-m-vw(28px)
+      margin-bottom: get-m-vw(40px)
+
+

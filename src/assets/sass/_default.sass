@@ -1,0 +1,98 @@
+body, html
+  line-height: 1
+  font-size-adjust: none
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  color: $main-color
+  font-size: get-vw(16px)
+  +mediaSize(1024)
+    font-size: get-t-vw(14px)
+  +mediaSize(750)
+    font-size: get-m-vw(14px)
+
+*
+  -webkit-text-size-adjust: none
+
+
+input, button
+  border-radius: 0
+  -webkit-appearance: none
+
+a[href]
+  outline: none
+  text-decoration: none
+  transition: 0.3s ease
+  color: $main-color
+
+a.nav-link[href],
+a:-webkit-any-link,
+a.news-slider-item[href]
+  text-decoration: none
+
+main
+  overflow: hidden
+
+.container-main
+  padding: get-vw(50px) get-vw(170px)
+  +mediaSize(1024)
+    padding: get-t-vw(40px)
+  +mediaSize(750)
+    padding: get-m-vw(20px)
+
+h1
+  font-size: get-vw(35px)
+  margin-bottom: get-vw(45px)
+  +mediaSize(1024)
+    font-size: get-t-vw(26px)
+  +mediaSize(750)
+    font-size: get-m-vw(24px)
+    margin-bottom: get-m-vw(20px)
+
+
+.hidden
+  display: none
+  visibility: hidden
+  pointer-events: none
+
+.icon
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-shrink: 0
+  img, svg
+    width: 100%
+    object-fit: contain
+    height: 100%
+
+    
+.tablet
+  +mediaSize(750)
+    display: none
+
+.main-btn
+  min-width: get-vw(160px)
+  display: flex
+  align-items: center
+  transition: 0.3s ease
+  justify-content: center
+  color: $main-dark-grey
+  line-height: 1.42
+  font-size: get-vw(14px)
+  border: 1px solid $main-light-grey
+  border-radius: get-vw(4px)
+  padding: get-vw(16px) get-vw(8px)
+  +mediaSize(1024)
+    min-width: get-t-vw(160px)
+    font-size: get-t-vw(16px)
+    border-radius: get-t-vw(6px)
+    padding: get-t-vw(16px) get-t-vw(8px)
+  +mediaSize(750)
+    min-width: get-m-vw(140px)
+    font-size: get-m-vw(14px)
+    border-radius: get-m-vw(6px)
+    padding: get-m-vw(14px) get-m-vw(8px)
+
+
+.main-btn.btn-active
+  color: #ffffff
+  background: $main-color
+  border-color: $main-color

@@ -1,0 +1,23 @@
+@import "src/assets/sass/mixins"
+@import "src/assets/sass/vars"
+
+.search-input
+  padding: get-vw(10px) get-vw(15px)
+  border: 1px solid $main-light-grey
+  line-height: 1.42
+  font-size: get-vw(14px)
+  color: $main-color
+  width: 100%
+
+  &::placeholder
+    color: $grey
+
++mediaSize(1024)
+  .search-input
+    padding: get-t-vw(12px) get-t-vw(15px)
+    font-size: get-t-vw(16px)
+
++mediaSize(750)
+  .search-input
+    padding: get-m-vw(10px) get-m-vw(15px)
+    font-size: get-m-vw(14px)

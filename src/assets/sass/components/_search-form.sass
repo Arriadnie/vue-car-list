@@ -1,0 +1,99 @@
+@import "src/assets/sass/mixins"
+@import "src/assets/sass/vars"
+
+.search-box
+  width: get-vw(380px)
+  padding: get-vw(25px)
+  border: 1px solid $main-light-grey
+  border-radius: get-vw(4px)
+
+  &__title
+    font-size: get-vw(16px)
+    line-height: 1.375
+
+    &-wrapper
+      display: flex
+      align-items: center
+      margin-bottom: get-vw(27px)
+
+      .icon
+        width: get-vw(20px)
+        margin-right: get-vw(10px)
+        height: get-vw(20px)
+
+  &__block
+    padding: get-vw(16px) 0
+    width: 100%
+    border-top: 1px solid $grey-lighter
+
+    &-title
+      font-size: get-vw(16px)
+      margin-bottom: get-vw(16px)
+      font-weight: 700
+      line-height: 1.375
+
+    .buttons
+      display: flex
+      align-items: center
+      justify-content: space-between
+
++mediaSize(1024)
+  .search-box
+    width: 100%
+    padding: get-t-vw(25px)
+    border-radius: get-t-vw(4px)
+    margin-bottom: get-t-vw(30px)
+
+    &__title
+      font-size: get-t-vw(22px)
+
+      &-wrapper
+        margin-bottom: get-t-vw(27px)
+
+        .icon
+          width: get-t-vw(25px)
+          margin-right: get-t-vw(10px)
+          height: get-t-vw(25px)
+
+    &__block
+      padding: get-t-vw(20px) 0
+
+      &-title
+        font-size: get-t-vw(20px)
+        margin-bottom: get-t-vw(16px)
+
+      .buttons
+        justify-content: flex-start
+
+        .main-btn + .main-btn
+          margin-left: get-t-vw(10px)
+
++mediaSize(750)
+  .search-box
+    padding: get-m-vw(20px)
+    border-radius: get-m-vw(4px)
+    margin-bottom: get-m-vw(20px)
+
+    &__title
+      font-size: get-m-vw(20px)
+
+      &-wrapper
+        margin-bottom: get-m-vw(20px)
+
+        .icon
+          width: get-m-vw(25px)
+          margin-right: get-m-vw(10px)
+          height: get-m-vw(25px)
+
+    &__block
+      padding: get-m-vw(20px) 0
+
+      &-title
+        font-size: get-m-vw(17px)
+        margin-bottom: get-m-vw(16px)
+
+      .buttons
+        justify-content: flex-start
+
+        .main-btn + .main-btn
+          margin-left: get-m-vw(10px)
